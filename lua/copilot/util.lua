@@ -74,6 +74,13 @@ function M.get_doc()
     position = params.position,
   }
 
+  if vim.bo.filetype == "gitcommit" then
+    local ok, diff = pcall(vim.fn.system, { "git", "diff", "--staged", "--no-color" })
+    if ok and diff and diff ~= "" then
+      doc.gitDiff = diff
+    end
+  end
+
   return doc
 end
 
