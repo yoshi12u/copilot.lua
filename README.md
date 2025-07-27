@@ -299,6 +299,12 @@ require("copilot").setup {
 }
 ```
 
+### git commit messages
+
+When editing a commit message (`gitcommit` filetype), Copilot uses the staged
+diff (`git diff --staged`) to generate commit message suggestions. Enable
+`gitcommit` in the `filetypes` table to use this feature.
+
 ### logger
 
 Logs will be written to the `file` for anything of `file_log_level` or higher.

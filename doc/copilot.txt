@@ -299,6 +299,11 @@ won’t be used anymore. e.g.
     }
 <
 
+GIT COMMIT MESSAGES~
+
+When editing a commit message (`gitcommit` filetype), Copilot fetches the
+staged diff (`git diff --staged`) to provide commit message suggestions. Enable
+`gitcommit` in the |copilot-filetypes| table to use this feature.
 
 LOGGER ~
 
